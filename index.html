@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="module">
+    import init, { render_template } from './pkg/rust_handlebars_browser.js';
+
+    async function run() {
+        await init();
+        document.body.innerHTML = render_template()
+    }
+
+    run();
+</script>
+</body>
+</html>
