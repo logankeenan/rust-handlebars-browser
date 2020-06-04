@@ -10,7 +10,7 @@ pub fn render_template() -> String {
     let reg = Handlebars::new();
     let template_string = include_str!("templates/index.hbs");
 
-    let result = reg.render_template(template_string, &json!({"dynamic_text": "foo"}));
+    let result = reg.render_template(template_string, &json!({"dynamic_text": "Rust is pretty nice!"}));
     match result {
         Ok(template) => {
             template
